@@ -1,0 +1,35 @@
+{
+  "name": "nft-dao",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy:contracts:localhost": "npx hardhat deploy --network localhost --tags $npm_config_tags",
+    "deploy:contracts:hardhat": "npx hardhat deploy --network hardhat --tags $npm_config_tags",
+    "deploy:contracts:rinkeby": "npx hardhat deploy --network rinkeby --tags $npm_config_tags"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pere970/nft-dao.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Pere970/nft-dao/issues"
+  },
+  "homepage": "https://github.com/Pere970/nft-dao#readme",
+  "dependencies": {
+    "@nomiclabs/hardhat-ethers": "^2.0.6",
+    "@nomiclabs/hardhat-waffle": "^2.0.3",
+    "chai": "^4.3.6",
+    "chai-ethers": "^0.0.1",
+    "dotenv": "^16.0.1",
+    "ethers": "^5.5.4",
+    "hardhat": "^2.9.7",
+    "hardhat-deploy": "^0.11.10",
+    "hardhat-deploy-ethers": "^0.3.0-beta.13",
+    "mocha": "^10.0.0"
+  }
+}
