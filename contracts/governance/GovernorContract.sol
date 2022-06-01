@@ -16,8 +16,6 @@ contract GovernorContract is Governor, GovernorCompatibilityBravo, GovernorVotes
     */
     uint256 public _votingDelay; // Delay in blocks before a voting starts
     uint256 public _votingPeriod; // Delay in blocks while a voting is active
-    uint256[] private _proposalIds; // Array of proposal ids
-
     /* 
         constructor
     */
@@ -138,9 +136,7 @@ contract GovernorContract is Governor, GovernorCompatibilityBravo, GovernorVotes
         override(Governor, GovernorCompatibilityBravo, IGovernor)
         returns (uint256)
     {
-        uint256 proposeResult = super.propose(targets, values, calldatas, description);
-        _proposalIds.push(proposeResult);
-        return proposeResult;
+        return super.propose(targets, values, calldatas, description);
     }
 
     /* 
