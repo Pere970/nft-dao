@@ -29,6 +29,7 @@ module.exports = {
   networks: {
     localhost: {
       ...sharedNetworkConfig,
+      url: "http://127.0.0.1:8545",
       blockGasLimit: 100000000,
       gas: 2000000,
       saveDeployments: true,
