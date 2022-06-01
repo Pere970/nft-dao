@@ -11,7 +11,7 @@ import "@openzeppelin/contracts/utils/math/SafeCast.sol";
 contract GovernorContract is Governor, GovernorCompatibilityBravo, GovernorVotes, GovernorVotesQuorumFraction, GovernorTimelockControl{
     using SafeCast for uint256;
 
-     /*
+    /*
         State variables
     */
     uint256 public _votingDelay; // Delay in blocks before a voting starts

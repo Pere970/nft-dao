@@ -2,8 +2,7 @@ const { expect } = require("chai");
 const { ethers } = require("hardhat");
 const init = require("../test-init");
 const { moveBlocks } = require("../helpers/move")
-
-const ZERO_ADDRESS = "0x0000000000000000000000000000000000000000";
+const testConfig = require("../test-config");
 
 const deploy = async () => {
     const setup = await init.initialize(await ethers.getSigners());
@@ -30,12 +29,12 @@ describe("Contract: NFTCollection", async function () {
     /* Contract deployment */
     context("Contract deployment", async () => {
         it("Should deploy an instance of NFT Collection", async function () {
-            expect(setup.tokens.nft.address).not.to.equal(ZERO_ADDRESS);
+            expect(setup.tokens.nft.address).not.to.equal(testConfig.SharedVariables.ZERO_ADDRESS);
         });
     
-        it("Should have the desired name and symbol", async function () {
-            expect(await setup.tokens.nft.name()).to.equal("DAO Token");
-            expect(await setup.tokens.nft.symbol()).to.equal("DAO");
+        it(`Should have the desired name and symbol (${testConfig.NFTArguments.name}, ${testConfig.NFTArguments.symbol})`, async function () {
+            expect(await setup.tokens.nft.name()).to.equal(testConfig.NFTArguments.name);
+            expect(await setup.tokens.nft.symbol()).to.equal(testConfig.NFTArguments.symbol);
         })
     })
     
