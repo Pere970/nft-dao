@@ -1,5 +1,5 @@
 # NFT DAO System
-This repo contains the smart contracts to create a DAO using an ERC721 token for voting.
+This repo contains the smart contracts to create a DAO using an ERC721 token for voting. It's been implemented using OpenZeppelin's Governor contracts.
 
 Users can mint tokens to get into the DAO, and vote on proposals. Each NFT equals to one vote. **Minting tokens is not restricted** or users will not be charged a fee as it is a test dao system and won't be used on a real production environment.
 
