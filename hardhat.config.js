@@ -5,8 +5,7 @@ require("hardhat-deploy");
 require("hardhat-deploy-ethers");
 require("solidity-coverage");
 
-const { INFURA_KEY, MNEMONIC, PK } =
-  process.env;
+const { INFURA_KEY, MNEMONIC, PK } = process.env;
 const DEFAULT_MNEMONIC = "hello darkness my old friend";
 
 const sharedNetworkConfig = {};
@@ -38,7 +37,7 @@ module.exports = {
     hardhat: {
       blockGasLimit: 10000000000000,
       gas: 200000000000,
-      saveDeployments: true
+      saveDeployments: true,
     },
     mainnet: {
       ...sharedNetworkConfig,
@@ -54,19 +53,19 @@ module.exports = {
       ...sharedNetworkConfig,
       url: "http://127.0.0.1:7545",
       saveDeployments: false,
-    }
+    },
   },
   solidity: {
-    version: '0.8.9',
+    version: "0.8.9",
     settings: {
-      optimizer:{
+      optimizer: {
         enabled: true,
-        runs: 200
-      }
-    }
+        runs: 200,
+      },
+    },
   },
   namedAccounts: {
     root: 0,
-    beneficiary: 1
+    beneficiary: 1,
   },
 };

@@ -4,7 +4,7 @@ const initialize = async (accounts) => {
   const setup = {};
   setup.roles = {
     root: accounts[0],
-    beneficiary: accounts[1]
+    beneficiary: accounts[1],
   };
 
   return setup;
