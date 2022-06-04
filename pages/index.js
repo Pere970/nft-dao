@@ -255,7 +255,7 @@ export default function Home() {
             && proposal.votingEnd < new Date()){
             if(ProposalStatus[proposal.status] == "Succeeded") { //It needs to be queued
               return {
-                header: proposal.id,
+                header: `ID: ${proposal.id}`,
                 description: proposal.description,
                 meta: ProposalStatus[proposal.status],
                 fluid: true,
@@ -276,7 +276,7 @@ export default function Home() {
             }
             else if (ProposalStatus[proposal.status] == "Queued") { //It needs to be executed
               return {
-                header: proposal.id,
+                header: `ID: ${proposal.id}`,
                 description: proposal.description,
                 meta: ProposalStatus[proposal.status],
                 fluid: true,
@@ -292,7 +292,7 @@ export default function Home() {
               }
             }
             return {
-              header: proposal.id,
+              header: `ID: ${proposal.id}`,
               description: proposal.description,
               fluid: true,
               meta: ProposalStatus[proposal.status],
@@ -313,7 +313,7 @@ export default function Home() {
           else if(proposal.votingStart != undefined
             && proposal.votingStart > new Date()){
               return {
-                header: proposal.id,
+                header: `ID: ${proposal.id}`,
                 description: proposal.description,
                 meta: ProposalStatus[proposal.status],
                 fluid: true,
@@ -327,7 +327,7 @@ export default function Home() {
           else{
              if (ProposalStatus[proposal.status] == "Active") { //It can be voted on
               return {
-                header: proposal.id,
+                header: `ID: ${proposal.id}`,
                 description: proposal.description,
                 fluid: true,
                 meta: ProposalStatus[proposal.status],

@@ -12,7 +12,7 @@
     "lint": "eslint . --ext .js && solhint 'contracts/**/*.sol'",
     "test": "hardhat test",
     "coverage": "hardhat coverage",
-    "dev" : "next dev"
+    "serve": "node ./server.js"
   },
   "repository": {
     "type": "git",

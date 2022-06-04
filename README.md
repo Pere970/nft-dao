@@ -6,6 +6,8 @@ Users can mint tokens to get into the DAO, and vote on proposals. Each NFT equal
 The DAO is intended to be used to increment or decrement by one the value of the Counter smart contract.
 
 
+![alt text](https://i.imgur.com/SdzgKLx.png)
+
 ## Development
 
 requires
@@ -77,7 +79,14 @@ General (one tag):
 General (multiple tags):
 `npm run deploy:contracts:mainnet --tags=<YOUR_TAG_NAME1>,<YOUR_TAG_NAME2>`
 
+## Run frontend
 
+After having installed all the modules, run the following command to run a basic frontend to interact with the DAO.
+
+```
+npm run serve
+```
+Port will be configured in the `.env` file by the name of "NEXT_PUBLIC_PORT".
 
 ## Code formatting
 
