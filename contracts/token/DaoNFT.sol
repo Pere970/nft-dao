@@ -34,6 +34,16 @@ contract DaoNFT is ERC721, EIP712, ERC721Votes {
         _safeMint(msg.sender, tokenId);
     }
 
+    /**
+     * @dev  Mints a given amount of tokens to the sender.
+     * @notice not using onlyOwner modifier for testing purposes. On real cases, this should be used or charge the user a minting fee.
+     */
+    function mintTokens(uint256 amount) public {
+        for(uint256 i = 0; i < amount; i++) {
+            mintToken();
+        }
+    }
+
     /* 
         Internal functions
     */

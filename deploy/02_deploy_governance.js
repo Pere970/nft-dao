@@ -29,7 +29,7 @@ const deployFunction = async ({ getNamedAccounts, deployments, network }) => {
   await deploy("GovernorContract", {
     contract: "GovernorContract",
     from: root,
-    args: [nft.address, 51, 200, 200, timelock.address],
+    args: [nft.address, 51, 20, 20, timelock.address],
     log: true,
   });
   const governor = await ethers.getContract("GovernorContract");

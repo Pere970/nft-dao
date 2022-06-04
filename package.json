@@ -11,7 +11,8 @@
     "format": "npx prettier --write \"**/*.js\" \"**/*.sol\"",
     "lint": "eslint . --ext .js && solhint 'contracts/**/*.sol'",
     "test": "hardhat test",
-    "coverage": "hardhat coverage"
+    "coverage": "hardhat coverage",
+    "dev" : "next dev"
   },
   "repository": {
     "type": "git",
@@ -30,14 +31,21 @@
     "@openzeppelin/contracts": "^4.6.0",
     "chai": "^4.3.6",
     "dotenv": "^16.0.1",
+    "eslint": "^7.28.0",
+    "eslint-config-prettier": "^8.3.0",
     "ethers": "^5.5.4",
     "hardhat": "^2.9.7",
     "hardhat-deploy": "^0.11.10",
     "hardhat-deploy-ethers": "^0.3.0-beta.13",
     "mocha": "^10.0.0",
+    "next": "12.1.6",
+    "next-routes": "^1.4.2",
+    "react": "18.1.0",
+    "react-dom": "^18.1.0",
+    "semantic-ui-css": "^2.4.1",
+    "semantic-ui-react": "^2.1.2",
     "solhint": "^3.3.6",
     "solidity-coverage": "^0.7.16",
-    "eslint": "^7.28.0",
-    "eslint-config-prettier": "^8.3.0"
+    "web3modal": "^1.9.7"
   }
 }
